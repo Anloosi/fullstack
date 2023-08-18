@@ -8,7 +8,9 @@ const { authUser,
 } = require('../controllers/userController');
 const {protect} = require('../middleware/autthMiddleware');
 
-
+// router.get('/', () => {
+//     console.log('Someone is trying to connect at users')
+// })
 router.post('/', registerUser);
 router.post('/auth', authUser);
 router.post('/logout', logoutUser);
