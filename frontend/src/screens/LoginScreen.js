@@ -15,6 +15,8 @@ import Loader from "../components/Loader";
     const navigate = useNavigate();
     const dispatch = useDispatch();
 
+    const [login, {isLoading}] = useLoginMutation();
+
     const { userInfo } = useSelector((state) => state.auth);
 
    useEffect(() => {
@@ -27,7 +29,7 @@ import Loader from "../components/Loader";
         e.preventDefault();
         try {
           const res = await login({email, password}).unwrap();
-          dispatch(setCredentials(...res))
+          dispatch(setCredentials({...res}))
           navigate('/')
         } catch (err) {
           toast.error(err?.data?.message || err.error);

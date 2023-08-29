@@ -18,6 +18,8 @@ import { setCredentials } from "../slices/authSlice";
     const dispatch = useDispatch();
 
     const { userInfo } = useSelector((state) => state.auth);
+
+    const [register, {isLoading}] = useRegisterMutation();
     
 
    useEffect(() => {
@@ -34,8 +36,8 @@ import { setCredentials } from "../slices/authSlice";
         }else {
           try {
             const res = await register({name, email, password}).unwrap();
-            dispatch(setCredentials(...res))
-            navigate('/')
+            dispatch(setCredentials({...res}));
+            navigate('/');
           }catch (err) {
             toast.error(err?.data?.message || err.error);
           }
