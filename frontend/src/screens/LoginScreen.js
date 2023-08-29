@@ -17,8 +17,6 @@ import Loader from "../components/Loader";
 
     const { userInfo } = useSelector((state) => state.auth);
 
-    const [login, {isLoading}] = useLoginMutation();
-
    useEffect(() => {
     if (userInfo) {
       navigate('/');
@@ -33,7 +31,6 @@ import Loader from "../components/Loader";
           navigate('/')
         } catch (err) {
           toast.error(err?.data?.message || err.error);
-
         }
     };
 

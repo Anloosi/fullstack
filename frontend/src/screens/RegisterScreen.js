@@ -17,8 +17,6 @@ import { setCredentials } from "../slices/authSlice";
     const navigate = useNavigate();
     const dispatch = useDispatch();
 
-    const [register, {isLoading}] = useRegisterMutation();
-    
     const { userInfo } = useSelector((state) => state.auth);
     
 

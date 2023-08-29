@@ -1,9 +1,12 @@
 import Hero from '../components/Hero'
 
 const HomeScreen = () => {
-  return <Hero />;
-  
-}
+  return(
+    <>
+  <Carousel />
+  <Hero />
+  </>
 
+)};
 
 export default HomeScreen;
