@@ -29,7 +29,7 @@ const Header = () => {
         <Navbar bg='dark' variant= 'dark' expand='lg' collapseOnSelect>
             <Container>
                 <LinkContainer to='/'>
-                <Navbar.Brand>Tripple Consult</Navbar.Brand> 
+                <Navbar.Brand>Prince & Pearl Akyeampong Family</Navbar.Brand> 
                 </LinkContainer>
                 <Navbar.Toggle aria-controls='basic-navebar-nav' />
                 <Navbar.Collapse id='basic-navbar.nav'>
@@ -39,9 +39,70 @@ const Header = () => {
                         <NavDropdown title={userInfo.name} id='username'>
                             <LinkContainer to='/profile'>
                                 <NavDropdown.Item>
-                                    Profile
+                                   Update Profile
                                 </NavDropdown.Item>                          
                             </LinkContainer>
+
+                            <LinkContainer to='/history'>
+                                <NavDropdown.Item>
+                                    History 
+                                </NavDropdown.Item>                          
+                            </LinkContainer>   
+
+                            <LinkContainer to='/princedaddy'>
+                                <NavDropdown.Item>
+                                    Daddy Prince
+                                </NavDropdown.Item>                          
+                            </LinkContainer>   
+
+                            <LinkContainer to='/pearlmama'>
+                                <NavDropdown.Item>
+                                    Mama Pearl
+                                </NavDropdown.Item>                          
+                            </LinkContainer>   
+
+                            <LinkContainer to='/Priscilla'>
+                                <NavDropdown.Item>
+                                    Priscilla Sedinam
+                                </NavDropdown.Item>                          
+                            </LinkContainer>   
+
+                            <LinkContainer to='/Princejr'>
+                                <NavDropdown.Item>
+                                    Prince Selassie
+                                </NavDropdown.Item>                          
+                            </LinkContainer>
+
+                            <LinkContainer to='/princeyaamaffuo'>
+                                <NavDropdown.Item>
+                                    Prince Yaamaffuo
+                                </NavDropdown.Item>                          
+                            </LinkContainer>   
+
+                            <LinkContainer to='/petrayaanietta'>
+                                <NavDropdown.Item>
+                                    Petra Yaanietta
+                                </NavDropdown.Item>                          
+                            </LinkContainer>
+
+                            <LinkContainer to='/princekatansa'>
+                                <NavDropdown.Item>
+                                    Prince Katansa
+                                </NavDropdown.Item>                          
+                            </LinkContainer>
+
+                            <LinkContainer to='/gallery'>
+                                <NavDropdown.Item>
+                                    Family Photos
+                                </NavDropdown.Item>                          
+                            </LinkContainer>
+
+                            <LinkContainer to='/news'>
+                                <NavDropdown.Item>
+                                    Family News
+                                </NavDropdown.Item>                          
+                            </LinkContainer>
+
                             <NavDropdown.Item onClick={ logoutHandler }>
                                 Logout
                           </NavDropdown.Item>
